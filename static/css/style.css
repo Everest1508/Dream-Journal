@@ -1,0 +1,447 @@
+/* Your existing CSS styles here */
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #007BFF; /* Change the background color */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure the navigation bar sticks to the left edge */
+    width: 100%;
+    height: 50px; /* Adjust the height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 0; /* Initial z-index */
+    transition: z-index 0.2s ease-in-out;
+}
+
+.navbar-brand {
+    margin-left: 20px; /* Adjust margin for spacing between website name and navigation */
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation links horizontally */
+}
+
+.navbar li {
+    margin-right:10px;
+    margin-left: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Rest of your CSS styles here */
+
+
+/* Modal styles */
+@font-face {
+    font-family: textaalt;
+    src: url('./TextaAltMedium.ttf');
+}
+body{
+    font-family: textaalt;
+    scrollbar-color: #ccc transparent;
+    scrollbar-width: thin;
+}
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #95ccff;
+}
+.modal {
+    font-family: textaalt;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 85%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+#openFormButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff; /* Change to your desired button color */
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#openFormButton:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for input elements */
+input[type="text"],
+select,
+input[type="date"] {
+    font-family: textaalt;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input[type="text"],input[type="date"]{
+    width: 97%;
+}
+
+/* Style for select dropdown */
+select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: url('down-arrow.png') no-repeat right center;
+    background-size: 20px;
+}
+/* Your existing CSS styles here */
+
+.textarea-container {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    font-family: textaalt;
+}
+
+.expand-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.expand-button:hover {
+    background-color: #0056b3;
+}
+
+
+.shrink-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.shrink-button:hover {
+    background-color: #0056b3;
+}
+textarea::-webkit-scrollbar {
+    width: 6px; /* Adjust the width of the scrollbar */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #83bbff; /* Adjust the color of the scrollbar thumb */
+}
+#expandedTextarea {
+    font-family: textaalt;
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 70vh;
+    font-size: 16px;
+    resize: vertical;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+/* ... Rest of your CSS styles ... */
+
+/* Style for grouped fields */
+.name-genre-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-genre-group label {
+    margin-bottom: 0;
+}
+
+.name-genre-group select {
+    margin-top: 5px;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.card-container {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    /* flex-wrap: wrap; */
+    justify-content: space-between; /* Adjust as needed */
+    gap: 20px; /* Adjust the gap between cards */
+}
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* One card per row on smaller screens */
+    }
+}
+.date, .genre {
+    font-size: 14px;
+    color: #777;
+    display: inline-block; /* Horizontally align */
+    margin-right: 10px; /* Add some spacing between date and genre */
+}
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.card {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.date, .genre, .author {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Your existing CSS styles here */
+
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-height: 60vh; /* Set maximum height to 60vh */
+    overflow-y: auto; /* Add scroll bar if content overflows */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+.custom-modal-content::-webkit-scrollbar {
+    width: 6px; /* Adjust the width of the scrollbar */
+}
+
+.custom-modal-content::-webkit-scrollbar-thumb {
+    background-color: #83bbff; /* Adjust the color of the scrollbar thumb */
+}
+.custom-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Your existing CSS styles here */
+.filter-buttons-container{
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+.filter-buttons-container::-webkit-scrollbar{
+    height: 1px;
+}
+.filter-buttons-container::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.filter-button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+.filter-buttons button {
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.filter-buttons button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.read-more-button{
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #b7efff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;   
+}
+
+.read-more-button:hover{
+    background-color: #007bff;
+    color:#fff;
+}
+
+/* Your existing CSS styles here */
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    position: flex;
+    bottom: 0;
+}
+
+/* Rest of your CSS styles here */
